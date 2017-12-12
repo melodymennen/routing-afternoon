@@ -16,9 +16,7 @@ export default class ClassList extends Component {
   }
 
   render() {
-    const students = this.state.students.map((students, i) => {
-      <Link to={`/student/${students.id}`} key={i}><h3>{`${students.first_name} ${students.last_name}`}</h3></Link>
-    })
+    const students = this.state.students.map((students, i) => <Link to={`/student/${students.id}`} key={i}><h3>{`${students.first_name} ${students.last_name}`}</h3></Link>)
 
     return (
       <div className="box">
